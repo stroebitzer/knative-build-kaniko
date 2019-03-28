@@ -9,4 +9,4 @@ RUN go build -o /build/server
 FROM alpine
 WORKDIR /srv/knative-build-kaniko
 COPY --from=build /build/server .
-ENTRYPOINT  [ "server" ]
+ENTRYPOINT  [ "./server" ]
